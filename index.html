@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Notification</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container">
+        <div class="notify"></div>
+        <i class="fab fa-facebook-messenger"></i>
+        <button class="btn">Notification</button>
+    </div>
+    <!-- Javascript Section -->
+    <script>
+        let notify = document.querySelector('.notify');
+        let btn = document.querySelector('.btn');
+        btn.addEventListener('click', active);
+
+        function active(){
+            let add = Number(notify.getAttribute("data-count") || 0);
+            notify.setAttribute("data-count", add + 1);
+            if(add === 0){
+                notify.classList.add('add-numb')
+            }
+            false;
+        }
+    </script>
+</body>
+</html>
